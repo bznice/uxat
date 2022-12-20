@@ -1,2 +1,2 @@
 # uXat
-Tens uXat? Manda aí, bora falar por aí!
+Tens uXat? Manda aí, bora falar por lá!
