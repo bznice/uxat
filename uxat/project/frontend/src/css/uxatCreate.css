@@ -44,7 +44,7 @@
 }
 
 .createBoxDiv {
-    background-color: var(--init-create-div-background-color);
+    background-color: var(--init-box-div-background-color);
     border-radius: 25px;
     margin: 20px 100px;
     padding: 30px;
