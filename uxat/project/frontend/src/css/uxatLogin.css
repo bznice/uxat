@@ -1,0 +1,67 @@
+@import 'theme.css';
+
+.loginP,
+.loginInput,
+.loginButton {
+    font-size: 12px;
+}
+
+.loginDiv,
+.loginBoxDiv {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+}
+
+.loginDiv,
+.loginButton {
+    text-align: center;
+}
+
+.loginInput,
+.loginButton {
+    border-radius: 3px;
+    padding: 5px 15px;
+    width: 100%;
+}
+
+.loginH1 {
+    margin: 25px 0px;
+    border: 0px;
+    padding: 0px;
+    font-size: 20px;
+}
+
+.loginH2 {
+    font-size: 16px;
+    justify-self: center;
+}
+
+.loginDiv {
+    color: var(--letter-text-color);
+    text-shadow: var(--letter-shadow-color) 4px 2px;
+    font-family: "Lucida Console";
+}
+
+.loginBoxDiv {
+    background-color: var(--init-login-div-background-color);
+    border-radius: 25px;
+    margin: 20px 100px;
+    padding: 30px;
+    max-width: 400px;
+    justify-items: left;
+}
+
+.loginInput {
+    background-color: var(--init-input-background-color);
+    border-color: var(--init-input-border-color);
+    color: var(--init-input-text-color);
+    margin: 0 0 10px;
+}
+
+.loginButton {
+    background-color: var(--init-button-background-color);
+    border-color: var(--init-button-border-color);
+    color: var(--init-button-text-color);
+    border-width: 1px;
+}

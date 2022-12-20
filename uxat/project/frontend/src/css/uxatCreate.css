@@ -1,0 +1,67 @@
+@import 'theme.css';
+
+.createP,
+.createInput,
+.createButton {
+    font-size: 12px;
+}
+
+.createDiv,
+.createBoxDiv {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+}
+
+.createDiv,
+.createButton {
+    text-align: center;
+}
+
+.createInput,
+.createButton {
+    border-radius: 3px;
+    padding: 5px 15px;
+    width: 100%;
+}
+
+.createH1 {
+    margin: 25px 0px;
+    border: 0px;
+    padding: 0px;
+    font-size: 20px;
+}
+
+.createH2 {
+    font-size: 16px;
+    justify-self: center;
+}
+
+.createDiv {
+    color: var(--letter-text-color);
+    text-shadow: var(--letter-shadow-color) 4px 2px;
+    font-family: "Lucida Console";
+}
+
+.createBoxDiv {
+    background-color: var(--init-create-div-background-color);
+    border-radius: 25px;
+    margin: 20px 100px;
+    padding: 30px;
+    max-width: 400px;
+    justify-items: left;
+}
+
+.createInput {
+    background-color: var(--init-input-background-color);
+    border-color: var(--init-input-border-color);
+    color: var(--init-input-text-color);
+    margin: 0 0 10px;
+}
+
+.createButton {
+    background-color: var(--init-button-background-color);
+    border-color: var(--init-button-border-color);
+    color: var(--init-button-text-color);
+    border-width: 1px;
+}
