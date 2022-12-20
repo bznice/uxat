@@ -37,13 +37,14 @@
 }
 
 .loginDiv {
-    color: var(--letter-text-color);
-    text-shadow: var(--letter-shadow-color) 4px 2px;
+    color: var(--init-text-color);
+    text-shadow: var(--init-shadow-color) 2px 1px;
     font-family: "Lucida Console";
 }
 
 .loginBoxDiv {
     background-color: var(--init-box-div-background-color);
+    text-shadow: var(--init-shadow-color) 1px 0.5px;
     border-radius: 25px;
     margin: 20px 100px;
     padding: 30px;
