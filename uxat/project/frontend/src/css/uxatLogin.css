@@ -22,7 +22,6 @@
 .loginButton {
     border-radius: 3px;
     padding: 5px 15px;
-    width: 100%;
 }
 
 .loginH1 {
@@ -64,4 +63,5 @@
     border-color: var(--init-button-border-color);
     color: var(--init-button-text-color);
     border-width: 1px;
+    width: 100%;
 }
