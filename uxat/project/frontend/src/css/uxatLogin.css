@@ -1,11 +1,5 @@
 @import 'theme.css';
 
-.loginP,
-.loginInput,
-.loginButton {
-    font-size: 12px;
-}
-
 .loginDiv,
 .loginBoxDiv {
     display: grid;
@@ -28,12 +22,16 @@
     margin: 25px 0px;
     border: 0px;
     padding: 0px;
-    font-size: 20px;
+    font-size: var(--h1-font-size);
 }
 
 .loginH2 {
-    font-size: 16px;
+    font-size: var(--h2-font-size);
     justify-self: center;
+}
+
+.loginP {
+    font-size: var(--p-font-size);
 }
 
 .loginDiv {
@@ -57,6 +55,7 @@
     border-color: var(--init-input-border-color);
     color: var(--init-input-text-color);
     margin: 0 0 10px;
+    font-size: var(--input-font-size);
 }
 
 .loginButton {
@@ -65,4 +64,5 @@
     color: var(--init-button-text-color);
     border-width: 1px;
     width: 100%;
+    font-size: var(--button-font-size);
 }
