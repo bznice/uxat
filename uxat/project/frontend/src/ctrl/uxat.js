@@ -2,7 +2,10 @@ angular.module("uxat", []);
 angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
 
     const appBegin = true;
-    const arrayTheme = ["light", "dark"];
+    const arrayTheme = ["light", "dark"];~
+
+    $scope.users;
+    $scope.usersN;
 
     $scope.helloWorldView = appBegin;
     $scope.uXatView = !appBegin;
@@ -11,6 +14,8 @@ angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
 
     document.body.className = arrayTheme.some(theme => document.body.className.includes(theme))
         ? document.body.className : "dark " + document.body.className;
+
+    /***********************************************************************************************/
 
     $scope.go = function() {
         $scope.helloWorldView = false;
@@ -32,4 +37,12 @@ angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
         $scope.loginView = false;
         $scope.createView = true;
     }
+
+    /***********************************************************************************************/
+
+    $scope.loginUser = function(user) {
+        $scope.go();
+    }
+
+    /***********************************************************************************************/
 }]);

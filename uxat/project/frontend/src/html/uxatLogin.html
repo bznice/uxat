@@ -3,11 +3,13 @@
     <div class="loginBoxDiv">
         <h2 class="loginH2">Login</h2>
         <p class="loginP">Nick:</p>
-        <input type="text" class="loginInput" placeholder="Put your nick here..."/>
+        <input type="text" class="loginInput" placeholder="Put your nick here..."
+            ng-model="user.nick"/>
         <p class="loginP">Pass:</p>
-        <input type="text" class="loginInput" placeholder="Put your pass here..."/>
+        <input type="text" class="loginInput" placeholder="Put your pass here..."
+            ng-model="user.pass"/>
         <p></p>
-        <button class="loginButton">Login</button>
+        <button class="loginButton" ng-click="loginUser(user)" ng-disabled="!user.nick && !user.pass">Login</button>
         <p></p>
         <button class="loginButton" ng-click="go()">Back</button>
         <p></p>
