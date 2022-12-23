@@ -14,3 +14,10 @@ html,
     border: 0px;
     padding: 0px;
 }
+
+.errorSpan {
+    font-size: var(--p-font-size);
+    color: var(--error-text-color);
+    text-shadow: var(--error-shadow-color) 2px 1px;
+    font-family: var(--font-family);
+}

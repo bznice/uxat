@@ -9,6 +9,8 @@ angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
 
     $scope.passTentative;
 
+    $scope.passDontMatchSpan = "";
+
     $scope.helloWorldView = appBegin;
     $scope.uXatView = !appBegin;
     $scope.loginView = !appBegin;
@@ -41,14 +43,38 @@ angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
     }
 
     /***********************************************************************************************/
+    /** LOGIN */
 
     $scope.loginUser = function(user) {
         $scope.go();
     }
 
+    /***********************************************************************************************/
+    /** CREATE */
+
     $scope.createUser = function(user) {
-        $scope.go();
+        if($scope.passEquals(user.pass, $scope.passTentative)) {
+            $scope.go();
+        } else {
+            $scope.passDontMatch();
+        }
+    }
+
+    $scope.passEquals = function(passO, passC) {
+        return passO === passC;
+    }
+
+    $scope.passDontMatch = function() {
+        var spanError = document.getElementById("passDontMatch");
+        spanError.textContent = "Both passwords don't match!";
+        if($scope.passDontMatchSpan != "") clearTimeout($scope.passDontMatchSpan);
+        $scope.passDontMatchSpan = setTimeout($scope.clearDemo, 3000, spanError, $scope.passDontMatchSpan);
     }
 
     /***********************************************************************************************/
+
+    $scope.clearDemo = function (log, timeoutId) {
+        log.textContent = "";
+        timeoutId = "";
+    }
 }]);
