@@ -17,7 +17,7 @@
 .letterClass {
     color: var(--letter-text-color);
     text-shadow: var(--letter-shadow-color) 4px 2px;
-    font-family: "Lucida Console";
+    font-family: var(--font-family);
     font-size: min(25vw, 100vh);
     text-align: center;
 }

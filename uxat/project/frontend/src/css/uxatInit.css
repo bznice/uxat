@@ -27,7 +27,7 @@
 .initDiv {
     color: var(--init-text-color);
     text-shadow: var(--init-shadow-color) 2px 1px;
-    font-family: "Lucida Console";
+    font-family: var(--font-family);
 }
 
 .initBoxDiv {
@@ -48,5 +48,7 @@
     border-radius: 3px;
     padding: 5px 15px;
     width: 100%;
+    font-family: var(--font-family);
     font-size: var(--button-font-size);
+    text-shadow: var(--init-shadow-color) 1px 0.5px;
 }
