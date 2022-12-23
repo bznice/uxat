@@ -4,7 +4,6 @@
 .createBoxDiv {
     display: grid;
     grid-template-columns: 100%;
-    justify-items: center;
 }
 
 .createDiv,
@@ -12,11 +11,20 @@
     text-align: center;
 }
 
-.createInput,
-.createButton {
-    border-radius: 3px;
-    padding: 5px 15px;
+.createDiv {
+    justify-items: center;
     font-family: var(--font-family);
+    color: var(--init-text-color);
+    text-shadow: var(--init-shadow-color) 2px 1px;
+}
+
+.createBoxDiv {
+    justify-items: left;
+    margin: 20px 100px;
+    padding: 30px;
+    max-width: 400px;
+    border-radius: 25px;
+    background-color: var(--init-box-div-background-color);
     text-shadow: var(--init-shadow-color) 1px 0.5px;
 }
 
@@ -28,43 +36,35 @@
 }
 
 .createH2 {
-    font-size: var(--h2-font-size);
     justify-self: center;
+    font-size: var(--h2-font-size);
 }
 
 .createP {
     font-size: var(--p-font-size);
 }
 
-.createDiv {
-    color: var(--init-text-color);
-    text-shadow: var(--init-shadow-color) 2px 1px;
+.createInput,
+.createButton {
+    padding: 5px 15px;
+    border-radius: 3px;
     font-family: var(--font-family);
-}
-
-.createBoxDiv {
-    background-color: var(--init-box-div-background-color);
     text-shadow: var(--init-shadow-color) 1px 0.5px;
-    border-radius: 25px;
-    margin: 20px 100px;
-    padding: 30px;
-    max-width: 400px;
-    justify-items: left;
 }
 
 .createInput {
+    margin: 0 0 10px;
+    font-size: var(--input-font-size);
     background-color: var(--init-input-background-color);
     border-color: var(--init-input-border-color);
     color: var(--init-input-text-color);
-    margin: 0 0 10px;
-    font-size: var(--input-font-size);
 }
 
 .createButton {
+    width: 100%;
+    border-width: 1px;
+    font-size: var(--button-font-size);
     background-color: var(--init-button-background-color);
     border-color: var(--init-button-border-color);
     color: var(--init-button-text-color);
-    border-width: 1px;
-    width: 100%;
-    font-size: var(--button-font-size);
 }

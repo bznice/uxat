@@ -4,12 +4,28 @@
 .initBoxDiv {
     display: grid;
     grid-template-columns: 100%;
-    justify-items: center;
 }
 
 .initDiv,
 .initButton {
     text-align: center;
+}
+
+.initDiv {
+    justify-items: center;
+    font-family: var(--font-family);
+    color: var(--init-text-color);
+    text-shadow: var(--init-shadow-color) 2px 1px;
+}
+
+.initBoxDiv {
+    justify-items: left;
+    margin: 20px 100px;
+    padding: 30px;
+    max-width: 400px;
+    border-radius: 25px;
+    background-color: var(--init-box-div-background-color);
+    text-shadow: var(--init-shadow-color) 1px 0.5px;
 }
 
 .initH1 {
@@ -20,35 +36,19 @@
 }
 
 .initH2 {
-    font-size: var(--h2-font-size);
     justify-self: center;
-}
-
-.initDiv {
-    color: var(--init-text-color);
-    text-shadow: var(--init-shadow-color) 2px 1px;
-    font-family: var(--font-family);
-}
-
-.initBoxDiv {
-    background-color: var(--init-box-div-background-color);
-    text-shadow: var(--init-shadow-color) 1px 0.5px;
-    border-radius: 25px;
-    margin: 20px 100px;
-    padding: 30px;
-    max-width: 400px;
-    justify-items: left;
+    font-size: var(--h2-font-size);
 }
 
 .initButton {
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-family: var(--font-family);
+    text-shadow: var(--init-shadow-color) 1px 0.5px;
+    width: 100%;
+    border-width: 1px;
+    font-size: var(--button-font-size);
     background-color: var(--init-button-background-color);
     border-color: var(--init-button-border-color);
     color: var(--init-button-text-color);
-    border-width: 1px;
-    border-radius: 3px;
-    padding: 5px 15px;
-    width: 100%;
-    font-family: var(--font-family);
-    font-size: var(--button-font-size);
-    text-shadow: var(--init-shadow-color) 1px 0.5px;
 }

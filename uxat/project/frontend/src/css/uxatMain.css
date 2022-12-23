@@ -1,12 +1,23 @@
 @import 'theme.css';
 
-.lettersDivClass,
-.letterClass {
-    width: 100%;
-    height: 100%;
+.bodyClass {
+    display: grid;
+    grid-template-columns: 100%;
     margin: 0px;
     border: 0px;
     padding: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-background-color);
+}
+
+.lettersDivClass,
+.letterClass {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
 }
 
 .lettersDivClass {
@@ -15,9 +26,16 @@
 }
 
 .letterClass {
+    text-align: center;
+    font-size: min(25vw, 100vh);
+    font-family: var(--font-family);
     color: var(--letter-text-color);
     text-shadow: var(--letter-shadow-color) 4px 2px;
+}
+
+.errorSpan {
+    font-size: var(--p-font-size);
     font-family: var(--font-family);
-    font-size: min(25vw, 100vh);
-    text-align: center;
+    color: var(--error-text-color);
+    text-shadow: var(--error-shadow-color) 2px 1px;
 }
