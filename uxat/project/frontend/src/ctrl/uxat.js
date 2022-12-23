@@ -5,7 +5,9 @@ angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
     const arrayTheme = ["light", "dark"];~
 
     $scope.users;
-    $scope.usersN;
+    $scope.usersN = 0;
+
+    $scope.passTentative;
 
     $scope.helloWorldView = appBegin;
     $scope.uXatView = !appBegin;
@@ -41,6 +43,10 @@ angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
     /***********************************************************************************************/
 
     $scope.loginUser = function(user) {
+        $scope.go();
+    }
+
+    $scope.createUser = function(user) {
         $scope.go();
     }
 
