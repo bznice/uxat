@@ -22,7 +22,7 @@
     justify-items: left;
     margin: 20px 100px;
     padding: 30px;
-    max-width: 400px;
+    max-width: 600px;
     border-radius: 25px;
     background-color: var(--init-box-div-background-color);
     text-shadow: var(--init-shadow-color) 1px 0.5px;
@@ -46,6 +46,7 @@
 
 .createInput,
 .createButton {
+    width: 100%;
     padding: 5px 15px;
     border-radius: 3px;
     font-family: var(--font-family);
@@ -61,7 +62,6 @@
 }
 
 .createButton {
-    width: 100%;
     border-width: 1px;
     font-size: var(--button-font-size);
     background-color: var(--init-button-background-color);
