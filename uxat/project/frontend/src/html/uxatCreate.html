@@ -17,11 +17,11 @@
         <p class="createP">
             Retry Pass:
         </p>
-        <input type="text" class="createInput" placeholder="Put your pass here..." ng-model="passTentative"
+        <input type="text" class="createInput" placeholder="Put your pass here..." ng-model="user.passTentative"
             ng-disabled="!user.pass" />
         <p></p>
-        <button class="createButton" ng-click="createUser(user, passTentative)"
-            ng-disabled="!user.nick || !user.pass || !passTentative">
+        <button class="createButton" ng-click="createUser(user)"
+            ng-disabled="!user.nick || !user.pass || !user.passTentative">
             Create Account
         </button>
         <p></p>

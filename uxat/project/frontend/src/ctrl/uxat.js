@@ -54,8 +54,8 @@ angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
     /***********************************************************************************************/
     /** CREATE */
 
-    $scope.createUser = function(user, passTentative) {
-        if($scope.passEquals(user.pass, passTentative)) {
+    $scope.createUser = function(user) {
+        if($scope.passEquals(user.pass, user.passTentative)) {
             if($scope.verifyNickIsUnique(user.nick)) {
                 $scope.go();
             } else {
@@ -65,7 +65,7 @@ angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
         } else {
             $scope.spanErrorPassDontMatch();
             user.pass = "";
-            passTentative = "";
+            user.passTentative = "";
         }
     }
 
