@@ -22,7 +22,7 @@
     justify-items: left;
     margin: 20px 100px;
     padding: 30px;
-    max-width: 600px;
+    width: 420px;
     border-radius: 25px;
     background-color: var(--init-box-div-background-color);
     text-shadow: var(--init-shadow-color) 1px 0.5px;
@@ -46,15 +46,15 @@
 
 .loginInput,
 .loginButton {
-    width: 100%;
-    padding: 5px 15px;
+    width: -webkit-fill-available;
+    padding: 5px 5px;
     border-radius: 3px;
     font-family: var(--font-family);
     text-shadow: var(--init-shadow-color) 1px 0.5px;
 }
 
 .loginInput {
-    margin: 0 0 10px;
+    margin: 0;
     font-size: var(--input-font-size);
     background-color: var(--init-input-background-color);
     border-color: var(--init-input-border-color);
