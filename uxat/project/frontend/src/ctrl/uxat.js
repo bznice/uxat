@@ -60,9 +60,11 @@ angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
                 $scope.go();
             } else {
                 $scope.spanErrorNickNotUnique();
+                user.nick = "";
             }
         } else {
             $scope.spanErrorPassDontMatch();
+            passTentative = "";
         }
     }
 
