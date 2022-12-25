@@ -64,6 +64,7 @@ angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
             }
         } else {
             $scope.spanErrorPassDontMatch();
+            user.pass = "";
             passTentative = "";
         }
     }
@@ -74,7 +75,7 @@ angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
 
     $scope.verifyNickIsUnique = function(nick) {
         let userListResult = $scope.users.filter(user => user.nick === nick);
-        return userListResult.length = 0;
+        return userListResult.length === 0;
     }
 
     $scope.spanErrorPassDontMatch = function() {
