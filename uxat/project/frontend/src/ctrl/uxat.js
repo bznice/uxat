@@ -2,7 +2,7 @@ angular.module("uxat", []);
 angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
 
     const appBegin = true;
-    const arrayTheme = ["light", "dark"];~
+    const arrayTheme = ["light", "dark"];
 
     $scope.users = [
         {nick: "bznc", pass: "1234"}
