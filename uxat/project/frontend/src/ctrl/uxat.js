@@ -4,10 +4,14 @@ angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
     const appBegin = true;
     const arrayTheme = ["light", "dark"];~
 
-    $scope.users;
-    $scope.usersN = 0;
+    $scope.users = [
+        {nick: "bznc", pass: "1234"}
+    ];
+    
+    $scope.usersN = 1;
 
     $scope.passDontMatchSpan = "";
+    $scope.userNotUniqueSpan = "";
 
     $scope.helloWorldView = appBegin;
     $scope.uXatView = !appBegin;
@@ -52,9 +56,13 @@ angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
 
     $scope.createUser = function(user, passTentative) {
         if($scope.passEquals(user.pass, passTentative)) {
-            $scope.go();
+            if($scope.verifyNickIsUnique(user.nick)) {
+                $scope.go();
+            } else {
+                $scope.spanErrorNickNotUnique();
+            }
         } else {
-            $scope.passDontMatch();
+            $scope.spanErrorPassDontMatch();
         }
     }
 
@@ -62,14 +70,29 @@ angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
         return passO === passT;
     }
 
-    $scope.passDontMatch = function() {
-        var spanError = document.getElementById("spanPassDontMatch");
+    $scope.verifyNickIsUnique = function(nick) {
+        let userListResult = $scope.users.filter(user => user.nick === nick);
+        return userListResult.length = 0;
+    }
+
+    $scope.spanErrorPassDontMatch = function() {
+        var spanError = document.getElementById("spanErrorCreate");
         spanError.textContent = "Both passwords don't match!";
-        if($scope.passDontMatchSpan != "") clearTimeout($scope.passDontMatchSpan);
-        $scope.passDontMatchSpan = setTimeout($scope.clearDemo, 3000, spanError, $scope.passDontMatchSpan);
+        $scope.setTimeoutSpan(spanError, $scope.passDontMatchSpan);
+    }
+
+    $scope.spanErrorNickNotUnique = function() {
+        var spanError = document.getElementById("spanErrorCreate");
+        spanError.textContent = "This Nick is not available!";
+        $scope.setTimeoutSpan(spanError, $scope.userNotUniqueSpan);
     }
 
     /***********************************************************************************************/
+
+    $scope.setTimeoutSpan = function(element, span) {
+        if(span != "") clearTimeout(span);
+        span = setTimeout($scope.clearDemo, 3000, element, span);
+    }
 
     $scope.clearDemo = function (log, timeoutId) {
         log.textContent = "";
