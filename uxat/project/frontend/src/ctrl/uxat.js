@@ -119,6 +119,8 @@ angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
         return 0;
     }
 
+    /*---------- OPERATIONS -------------------*/
+
     $scope.passEquals = function(passO, passT) {
         return passO === passT;
     }
@@ -153,6 +155,8 @@ angular.module("uxat").controller("uxatCtrl", ['$scope', function ($scope) {
         });
         return containsLower && containsUpper && containsDigit;
     }
+
+    /*---------- SPAN CONTROLLER --------------*/
 
     $scope.spanErrorPassDontMatch = function() {
         var spanError = document.getElementById("spanErrorCreate");
