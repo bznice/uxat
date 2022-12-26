@@ -6,16 +6,12 @@
     grid-template-columns: 100%;
 }
 
-.initDiv,
-.initButton {
-    text-align: center;
-}
-
 .initDiv {
     justify-items: center;
+    text-align: center;
     font-family: var(--font-family);
-    color: var(--init-text-color);
-    text-shadow: var(--init-shadow-color) 2px 1px;
+    color: var(--text-color);
+    text-shadow: var(--shadow-color) 2px 1px;
 }
 
 .initBoxDiv {
@@ -24,8 +20,8 @@
     padding: 30px;
     width: 420px;
     border-radius: 25px;
-    background-color: var(--init-box-div-background-color);
-    text-shadow: var(--init-shadow-color) 1px 0.5px;
+    background-color: var(--box-div-background-color);
+    text-shadow: var(--shadow-color) 1px 0.5px;
 }
 
 .initH1 {
@@ -38,17 +34,4 @@
 .initH2 {
     justify-self: center;
     font-size: var(--h2-font-size);
-}
-
-.initButton {
-    padding: 5px 5px;
-    border-radius: 3px;
-    font-family: var(--font-family);
-    text-shadow: var(--init-shadow-color) 1px 0.5px;
-    width: -webkit-fill-available;
-    border-width: 1px;
-    font-size: var(--button-font-size);
-    background-color: var(--init-button-background-color);
-    border-color: var(--init-button-border-color);
-    color: var(--init-button-text-color);
 }

@@ -6,16 +6,12 @@
     grid-template-columns: 100%;
 }
 
-.loginDiv,
-.loginButton {
-    text-align: center;
-}
-
 .loginDiv {
     justify-items: center;
+    text-align: center;
     font-family: var(--font-family);
-    color: var(--init-text-color);
-    text-shadow: var(--init-shadow-color) 2px 1px;
+    color: var(--text-color);
+    text-shadow: var(--shadow-color) 2px 1px;
 }
 
 .loginBoxDiv {
@@ -24,8 +20,8 @@
     padding: 30px;
     width: 420px;
     border-radius: 25px;
-    background-color: var(--init-box-div-background-color);
-    text-shadow: var(--init-shadow-color) 1px 0.5px;
+    background-color: var(--box-div-background-color);
+    text-shadow: var(--shadow-color) 1px 0.5px;
 }
 
 .loginH1 {
@@ -44,27 +40,15 @@
     font-size: var(--p-font-size);
 }
 
-.loginInput,
-.loginButton {
-    width: -webkit-fill-available;
-    padding: 5px 5px;
-    border-radius: 3px;
-    font-family: var(--font-family);
-    text-shadow: var(--init-shadow-color) 1px 0.5px;
-}
-
 .loginInput {
     margin: 0;
+    padding: 5px 5px;
+    width: -webkit-fill-available;
+    border-radius: 3px;
     font-size: var(--input-font-size);
-    background-color: var(--init-input-background-color);
-    border-color: var(--init-input-border-color);
-    color: var(--init-input-text-color);
-}
-
-.loginButton {
-    border-width: 1px;
-    font-size: var(--button-font-size);
-    background-color: var(--init-button-background-color);
-    border-color: var(--init-button-border-color);
-    color: var(--init-button-text-color);
+    font-family: var(--font-family);
+    background-color: var(--input-background-color);
+    border-color: var(--input-border-color);
+    color: var(--input-text-color);
+    text-shadow: var(--shadow-color) 1px 0.5px;
 }
