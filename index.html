@@ -17,28 +17,23 @@
     <script src="uxat/project/frontend/src/ctrl/uxat.js"></script>
 </head>
 
-<body id="bodyId" class="bodyClass ng-scope" ng-controller="uxatCtrl">
-
+<body id="bodyId" class="dark bodyClass ng-scope" ng-controller="uxatCtrl">
     <!-- Main Secret -->
     <ng-include src="'uxat/project/frontend/src/html/uxatMain.html'"
                 ng-if="helloWorldView">
     </ng-include>
-
     <!-- Init Page -->
     <ng-include src="'uxat/project/frontend/src/html/uxatInit.html'"
                 ng-if="uXatView">
     </ng-include>
-
     <!-- Login User Page -->
     <ng-include src="'uxat/project/frontend/src/html/uxatLogin.html'"
                 ng-if="loginView">
     </ng-include>
-
     <!-- Create User Page -->
     <ng-include src="'uxat/project/frontend/src/html/uxatCreate.html'"
                 ng-if="createView">
     </ng-include>
-
 </body>
 
 </html>
